@@ -1,0 +1,5 @@
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Release\TreehouseDefense.exe.config
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Release\TreehouseDefense.exe
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Release\TreehouseDefense.pdb
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\obj\Release\TreehouseDefense.exe
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\obj\Release\TreehouseDefense.pdb

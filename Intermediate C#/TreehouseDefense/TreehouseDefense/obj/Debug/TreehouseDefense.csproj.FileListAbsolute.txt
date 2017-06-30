@@ -1,0 +1,6 @@
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Debug\TreehouseDefense.exe.config
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Debug\TreehouseDefense.exe
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\bin\Debug\TreehouseDefense.pdb
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\obj\Debug\TreehouseDefense.csprojResolveAssemblyReference.cache
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\obj\Debug\TreehouseDefense.exe
+c:\users\nordc\documents\visual studio 2017\Projects\TreehouseDefense\TreehouseDefense\obj\Debug\TreehouseDefense.pdb
