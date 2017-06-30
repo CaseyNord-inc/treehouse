@@ -1,0 +1,6 @@
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\bin\Debug\Nord.SimpleConsoleApp.exe.config
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\bin\Debug\Nord.SimpleConsoleApp.exe
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\bin\Debug\Nord.SimpleConsoleApp.pdb
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\obj\Debug\Nord.SimpleConsoleApp.csprojResolveAssemblyReference.cache
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\obj\Debug\Nord.SimpleConsoleApp.exe
+c:\users\nordc\documents\visual studio 2017\Projects\Nord.SimpleConsoleApp\Nord.SimpleConsoleApp\obj\Debug\Nord.SimpleConsoleApp.pdb
