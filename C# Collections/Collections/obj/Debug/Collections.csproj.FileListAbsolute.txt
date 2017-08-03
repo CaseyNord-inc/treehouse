@@ -1,0 +1,6 @@
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\bin\Debug\Collections.exe.config
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\bin\Debug\Collections.exe
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\bin\Debug\Collections.pdb
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\obj\Debug\Collections.csprojResolveAssemblyReference.cache
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\obj\Debug\Collections.exe
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\Collections\obj\Debug\Collections.pdb

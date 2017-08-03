@@ -1,0 +1,6 @@
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\bin\Debug\MorseCodeTranslator.exe.config
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\bin\Debug\MorseCodeTranslator.exe
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\bin\Debug\MorseCodeTranslator.pdb
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\obj\Debug\MorseCodeTranslator.csprojResolveAssemblyReference.cache
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\obj\Debug\MorseCodeTranslator.exe
+C:\Users\nordc\Documents\Code\Treehouse\C# Collections\MorseCodeTranslator\obj\Debug\MorseCodeTranslator.pdb
