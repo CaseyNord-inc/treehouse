@@ -10,11 +10,11 @@
 import random
 import os
 
-# scoreboard?
+# wasd movement
 # change player to a dictionary with a key that hold onto where the player has been.  Then when drawing map show every cell they've been in.
 
 
-CELLS = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0),
+ROOMS = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0),
          (0, 1), (1, 1), (2, 1), (3, 1), (4, 1),
          (0, 2), (1, 2), (2, 2), (3, 2), (4, 2),
          (0, 3), (1, 3), (2, 3), (3, 3), (4, 3),
@@ -26,33 +26,37 @@ def clear_screen():
 
 
 def get_locations():
-    return random.sample(CELLS, 7)
+    return random.sample(ROOMS, 7)
 
 
 def move_player(player, move):
     x, y = player
-    if move == "LEFT":
+    if move in ["LEFT", "A"]:
         x -= 1
-    if move == "RIGHT":
+    if move in ["RIGHT", "D"]:
         x += 1
-    if move == "UP":
+    if move in ["UP", "W"]:
         y -= 1
-    if move == "DOWN":
+    if move in ["DOWN", "S"]:
         y += 1
     return x, y
 
 
 def get_moves(player):
-    moves = ["LEFT", "RIGHT", "UP", "DOWN"]
+    moves = ["LEFT", "RIGHT", "UP", "DOWN", "W", "A", "S", "D"]
     x, y = player
     if x == 0:
         moves.remove("LEFT")
+        moves.remove("A")
     if x == 4:
         moves.remove("RIGHT")
+        moves.remove("D")
     if y == 0:
         moves.remove("UP")
+        moves.remove("W")
     if y == 4:
         moves.remove("DOWN")
+        moves.remove("S")
     return moves
 
 
@@ -92,7 +96,7 @@ def draw_map(found_map, found_door, has_key, has_sword, has_secret_orb, debug, p
     print(" _"*5)
     tile = "|{}"
 
-    for cell in CELLS:
+    for cell in ROOMS:
         x, y = cell
         if x < 4:
             line_end = ""
@@ -143,7 +147,7 @@ def game_loop():
     has_sword = False
     has_secret_orb = False
     debug = False
-    valid_inputs = ["LEFT", "RIGHT", "UP", "DOWN", "QUIT", "DEBUG"]
+    valid_inputs = ["LEFT", "RIGHT", "UP", "DOWN", "W", "A", "S", "D", "QUIT", "DEBUG"]
     wall_checks = ["QUIT", "DEBUG"]
 
 
@@ -223,6 +227,7 @@ def game_loop():
             game_loop()
 
 
+#Welcome the user and initialize game
 clear_screen()
 print("Welcome to the dungeon!")
 input("Press return to start!")
