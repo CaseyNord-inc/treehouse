@@ -11,7 +11,7 @@ while True:
 
     # be able to quit the app
     if new_item == 'DONE':
-        break                
+        break
 
 # add new items to our list
     shopping_list.append(new_item)

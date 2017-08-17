@@ -55,5 +55,5 @@ class YatzyHand(Hand):
             3: len(self.threes),
             4: len(self.fours),
             5: len(self.fives),
-            5: len(self.sixes)
-    }
+            6: len(self.sixes)
+        }

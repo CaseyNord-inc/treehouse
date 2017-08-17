@@ -62,7 +62,6 @@ def draw(misses, corrects, word):
     print('\n\n')
 
 
-
 def play(done):
     clear()
     word = random.choice(WORDS)
@@ -89,12 +88,12 @@ def play(done):
                 draw(misses, correct, word)
                 print("You lost! The secret word was {}".format(word.upper()))
                 done = True
-
         if done:
             if input("Play again? [Y/n]? ").lower() != 'n':
                 return play(done=False)
             else:
                 sys.exit()
+
 
 print('Welcome to Letter Guess!')
 

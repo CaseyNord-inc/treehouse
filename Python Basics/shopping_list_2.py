@@ -1,10 +1,12 @@
 # make a list to hold onto our items
 shopping_list = []
 
+
 def add_to_list(new_item):
     # add new items to our list
     shopping_list.append(new_item)
     print("Added {}. List now has {} items.".format(new_item, len(shopping_list)))
+
 
 def show_list():
     # print out the list
@@ -13,13 +15,15 @@ def show_list():
     for item in shopping_list:
         print(item)
 
+
 def save_list():
     file = open('shopping_list_2.txt', 'w')
 
     for item in shopping_list:
-        file.write(item + '\n')     
+        file.write(item + '\n')
 
     file.close()
+
 
 def show_help():
     # print out instructions on how to use the app
@@ -30,6 +34,7 @@ Enter 'SHOW' to show the items currently on the list.
 Enter 'HELP' to show a list of useful commands.
 Enter 'SAVE' to save the list to as .txt
 """)
+
 
 def main():
     show_help()
@@ -53,5 +58,6 @@ def main():
         add_to_list(new_item)
 
     show_list()
+
 
 main()

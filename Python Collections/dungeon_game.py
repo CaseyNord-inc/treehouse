@@ -104,4 +104,3 @@ print("Welcome to the dungeon!")
 input("Press return to start!")
 clear_screen()
 game_loop()
-   

@@ -6,6 +6,7 @@ class Circle:
     def radius(self):
         return self.diameter / 2
 
+
 small = Circle(10)
-print (small.diameter)
-print (small.radius)
+print(small.diameter)
+print(small.radius)

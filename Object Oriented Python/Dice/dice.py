@@ -1,5 +1,6 @@
 import random
 
+
 class Die:
     def __init__(self, sides=2, value=0):
         if not sides >= 2:
@@ -12,7 +13,7 @@ class Die:
 
     def __int__(self):
         return self.value
-    
+
     def __eq__(self, other):
         return int(self) == other
 
@@ -45,21 +46,26 @@ class D4(Die):
     def __init__(self, value=0):
         super().__init__(sides=4, value=value)
 
+
 class D6(Die):
     def __init__(self, value=0):
         super().__init__(sides=6, value=value)
+
 
 class D8(Die):
     def __init__(self, value=0):
         super().__init__(sides=8, value=value)
 
+
 class D10(Die):
     def __init__(self, value=0):
         super().__init__(sides=10, value=value)
 
+
 class D12(Die):
     def __init__(self, value=0):
         super().__init__(sides=12, value=value)
+
 
 class D20(Die):
     def __init__(self, value=0):

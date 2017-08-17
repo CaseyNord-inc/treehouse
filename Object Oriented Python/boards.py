@@ -6,11 +6,11 @@ class Board:
         for y in range(self.height):
             for x in range(self.width):
                 self.cells.append((x, y))
-                
+
     def __iter__(self):
         for coord in self.cells:
             yield coord
-                
+
 
 class TicTacToe(Board):
     def __init__(self):

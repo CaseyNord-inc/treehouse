@@ -29,7 +29,7 @@ class YatzyScoresheet:
 
     def score_chance(self, hand):
         return sum(hand)
-    
+
     def score_yatzy(self, hand):
         if self._score_set(hand, 5):
             return 50

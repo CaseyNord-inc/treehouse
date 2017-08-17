@@ -76,7 +76,7 @@ def save_list():
     file = open('shopping_list_2.txt', 'w')
 
     for item in shopping_list:
-        file.write(item + '\n')     
+        file.write(item + '\n')
 
     file.close()
     show_list()
@@ -125,5 +125,6 @@ def main():
             add_to_list(new_item)
 
     show_list()
+
 
 main()

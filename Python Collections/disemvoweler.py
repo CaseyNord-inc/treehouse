@@ -3,16 +3,16 @@ def main():
     disemvowel(word)
 
 
-def disemvowel(word): 
+def disemvowel(word):
     word_list = list(word)
-    vowels = ['a', 'e', 'i', 'o', 'u', 'A','E', 'I', 'O', 'U']
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     for i in vowels:
         while True:
             try:
                 word_list.remove(i)
             except ValueError:
-                break   
-    print("{}".format(''.join(word_list))) 
+                break
+    print("{}".format(''.join(word_list)))
 
 
 if __name__ == "__main__":

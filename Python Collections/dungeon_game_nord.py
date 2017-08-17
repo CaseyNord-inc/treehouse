@@ -62,13 +62,13 @@ def get_moves(player):
 
 def move_monster(monster, monster_move_choice, monster_turn):
     x, y = monster
-    if monster_move_choice == "LEFT" and monster_turn == True:
+    if monster_move_choice == "LEFT" and monster_turn is True:
         x -= 1
-    if monster_move_choice == "RIGHT" and monster_turn == True:
+    if monster_move_choice == "RIGHT" and monster_turn is True:
         x += 1
-    if monster_move_choice == "UP" and monster_turn == True:
+    if monster_move_choice == "UP" and monster_turn is True:
         y -= 1
-    if monster_move_choice == "DOWN" and monster_turn == True:
+    if monster_move_choice == "DOWN" and monster_turn is True:
         y += 1
     return x, y
 
@@ -102,17 +102,17 @@ def draw_map(found_map, found_door, has_key, has_sword, has_secret_orb, debug, p
             line_end = ""
             if cell == player:
                 output = tile.format("X")
-            elif cell == door and (debug == True or found_map == True or found_door == True):
+            elif cell == door and (debug is True or found_map is True or found_door is True):
                 output = tile.format("D")
-            elif cell == key and (debug == True or found_map ==True or has_key == True):
+            elif cell == key and (debug is True or found_map is True or has_key is True):
                 output = tile.format("K")
-            elif cell == sword and (debug == True or found_map ==True or has_sword == True):
+            elif cell == sword and (debug is True or found_map is True or has_sword is True):
                 output = tile.format("S")
-            elif cell == secret_orb and (debug == True or has_secret_orb == True):
+            elif cell == secret_orb and (debug is True or has_secret_orb is True):
                 output = tile.format("T")
-            elif cell == monster and (debug == True or has_secret_orb == True):
+            elif cell == monster and (debug is True or has_secret_orb is True):
                 output = tile.format("O")
-            elif cell == game_map and (debug == True or found_map == True):
+            elif cell == game_map and (debug is True or found_map is True):
                 output = tile.format("M")
             else:
                 output = tile.format("_")
@@ -120,17 +120,17 @@ def draw_map(found_map, found_door, has_key, has_sword, has_secret_orb, debug, p
             line_end = "\n"
             if cell == player:
                 output = tile.format("X|")
-            elif cell == door and (debug == True or found_map == True or found_door == True):
+            elif cell == door and (debug is True or found_map is True or found_door is True):
                 output = tile.format("D|")
-            elif cell == key and (debug == True or found_map ==True or has_key == True):
+            elif cell == key and (debug is True or found_map is True or has_key is True):
                 output = tile.format("K|")
-            elif cell == sword and (debug == True or found_map ==True or has_sword == True):
+            elif cell == sword and (debug is True or found_map is True or has_sword is True):
                 output = tile.format("S|")
-            elif cell == secret_orb and (debug == True or has_secret_orb == True):
+            elif cell == secret_orb and (debug is True or has_secret_orb is True):
                 output = tile.format("T|")
-            elif cell == monster and (debug == True or has_secret_orb == True):
+            elif cell == monster and (debug is True or has_secret_orb is True):
                 output = tile.format("O|")
-            elif cell == game_map and (debug == True or found_map == True):
+            elif cell == game_map and (debug is True or found_map is True):
                 output = tile.format("M|")
             else:
                 output = tile.format("_|")
@@ -168,56 +168,56 @@ def game_loop():
             print("\n ** See you next time! ** \n")
             break
         if move == 'DEBUG':
-            if debug == False:
+            if debug is False:
                 debug = True
-            elif debug == True:
+            elif debug is True:
                 debug = False
         if move not in valid_inputs:
             input("\n ** That is not a valid input! **\n")
         elif move in valid_moves:
-            if monster_turn == True:
+            if monster_turn is True:
                 monster_move_choice = random.choice(valid_monster_moves)
                 monster = move_monster(monster, monster_move_choice, monster_turn)
                 monster_turn = False
-            elif monster_turn == False:
+            elif monster_turn is False:
                 monster_turn = True
             player = move_player(player, move)
             if player == game_map:
-                if found_map == False:
+                if found_map is False:
                     found_map = True
                     input("\n ** You've found a map of the dungeon that reveals the location of the KEY and the EXIT! Something else is on here too, it might be worth investigating! **\n")
-                elif found_map == True:
+                elif found_map is True:
                     continue
             if player == key:
-                if has_key == False:
+                if has_key is False:
                     has_key = True
                     input("\n  ** You've found a key! You might need this to open a door... **\n")
-                if has_key == True:
+                if has_key is True:
                     continue
             if player == door:
-                if has_key == False:
+                if has_key is False:
                     found_door = True
                     input("\n ** You've found the door but it is locked and won't budge. There must be key hidden somewhere else in the dungeon! **\n")
-                elif has_key == True:
+                elif has_key is True:
                     input("\n ** You try the key to open the door and it works! You've escaped the dungeon! Congratulations! ** \n")
                     playing = False
             if player == sword:
-                if has_sword == False:
+                if has_sword is False:
                     has_sword = True
                     input("\n  ** You've found a sword! It appears old and brittle but might help you defend against any dangers! **\n")
-                if has_sword == True:
+                if has_sword is True:
                     continue
             if player == secret_orb:
-                if has_secret_orb == False:
+                if has_secret_orb is False:
                     has_secret_orb = True
                     input("\n  ** You've found a secret orb! Peering into it reveals the location of the dungeon's monster. This should help you survive! **\n")
-                if has_secret_orb == True:
+                if has_secret_orb is True:
                     continue
             if player == monster:
-                if has_sword == True:
+                if has_sword is True:
                     has_sword = False
                     input("\n ** You encounter the monster of the dungeon! You fight for your life and just barely manage to escape. Your brittle sword is destroyed in the fray, better be careful! **\n")
-                elif has_sword == False:
+                elif has_sword is False:
                     print("\n ** Oh no, the monster got you! With nothing to defend yourself you didn't stand a chance, better luck next time! ** \n")
                     playing = False
         elif move not in wall_checks:
@@ -227,10 +227,9 @@ def game_loop():
             game_loop()
 
 
-#Welcome the user and initialize game
+# Welcome the user and initialize game
 clear_screen()
 print("Welcome to the dungeon!")
 input("Press return to start!")
 clear_screen()
 game_loop()
-   

@@ -1,4 +1,5 @@
-import random, os
+import random
+
 
 def game():
     # generate a random number between 1 and 10
@@ -28,5 +29,6 @@ def game():
         game()
     else:
         print("Bye!")
+
 
 game()

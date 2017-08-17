@@ -14,6 +14,7 @@ COURSES = {
                     "functions", "input"}
 }
 
+
 def covers(set_of_topics):
     list_of_courses = []
     for key, value in COURSES.items():
@@ -28,5 +29,6 @@ def covers_all(set_of_topics):
         if value >= set_of_topics:
             list_of_courses.append(key)
     print(list_of_courses)
+
 
 covers_all({"conditions", "input"})

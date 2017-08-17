@@ -1,12 +1,5 @@
 import random
 
-    # draw grid
-    # pick random location for player
-    # pick random location for exit door
-    # pick random location for monster
-    # draw player in the grid
-    # take input for movement
-    # move player, unless invalid move (past edges of grid)
 # check for win/loss
 # clear screen and redraw grid
 
@@ -47,6 +40,7 @@ def move_player(player, move):
         player = x, y+1
     return player
 
+
 def get_moves(player):
     x_pos, y_pos = player
     # if player's y == 0, they can't move up
@@ -65,6 +59,7 @@ def get_moves(player):
         move_player(player, move)
     return move
 
+
 def available_moves(player):
     x_pos, y_pos = player
     list_of_moves = []
@@ -78,6 +73,7 @@ def available_moves(player):
         list_of_moves.append("RIGHT")
     return list_of_moves
 
+
 def win_loss(player, door, monster):
     if player == door:
         print("You win!")
@@ -87,8 +83,8 @@ def win_loss(player, door, monster):
 
 while True:
     print("Welcome to the dungeon!")
-    print("You're currently in room {}".format(player)) # fill with player position
-    print("You can move {}") # fill with available moves
+    print("You're currently in room {}".format(player))  # fill with player position
+    print("You can move {}")  # fill with available moves
     print("Enter QUIT to quit")
 
     move = input("> ")

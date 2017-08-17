@@ -1,4 +1,7 @@
-import random, time, sys
+import random
+import time
+import sys
+
 
 def main():
     print("I want you to think of a number between 1 and 1000, and I'm going to guess it. I wonder how many tries it will take?\n")
@@ -22,11 +25,13 @@ def main():
             break
     play_again()
 
+
 def print_slow(string):
     for char in string:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.5)
+
 
 def play_again():
     print("\nThat was fun! Can we play again? Y/n")

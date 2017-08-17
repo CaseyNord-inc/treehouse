@@ -6,11 +6,11 @@ class Hand(list):
         if not die_class:
             raise ValueError("You must provide a die class")
         super().__init__()
-        
+
         for _ in range(size):
             self.append(die_class())
         self.sort()
-        
+
     def _by_value(self, value):
         dice = []
         for die in self:
@@ -22,31 +22,31 @@ class Hand(list):
 class CapitalismHand(Hand):
     def __init__(self):
         super().__init__(size=2, die_class=D6)
-    
+
     @property
     def ones(self):
         return self._by_value(1)
-    
+
     @property
     def twos(self):
         return self._by_value(2)
-    
+
     @property
     def threes(self):
         return self._by_value(3)
-    
+
     @property
     def fours(self):
         return self._by_value(4)
-    
+
     @property
     def fives(self):
         return self._by_value(5)
-    
+
     @property
     def sixes(self):
         return self._by_value(6)
-    
+
     @property
     def _sets(self):
         return {
@@ -57,7 +57,7 @@ class CapitalismHand(Hand):
             5: len(self.fives),
             6: len(self.sixes)
         }
-    
+
     @property
     def doubles(self):
         if self[0] == self[1]:

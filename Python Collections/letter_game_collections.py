@@ -5,7 +5,7 @@ import sys
 with open("letter_game.txt") as f:
     content = f.readlines()
 # you may also want to remove whitespace characters like `\n` at the end of each line
-WORDS = [x.strip() for x in content] 
+WORDS = [x.strip() for x in content]
 
 
 def clear():
@@ -46,6 +46,7 @@ def get_guess(guesses):
         else:
             return guess
 
+
 def play(done):
     clear()
     secret_word = random.choice(WORDS).lower()
@@ -78,6 +79,7 @@ def play(done):
             else:
                 sys.exit()
 
+
 def welcome():
     start = input("Press enter/return to start or Q to quit ").lower()
     if start == 'q':
@@ -85,6 +87,7 @@ def welcome():
         sys.exit()
     else:
         return True
+
 
 print("Welcome to Letter Guess!")
 
