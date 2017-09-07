@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lunch</title>
+    </head>
+    <body>
+
+        <nav>
+            <!-- Add menu here -->
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('logout') }}" title="Sign Out"></a>
+            {% else %}
+            <a href="{{ url_for('login') }}" title="Sign In"></a>
+            <a href="{{ url_for('register') }}" title="Sign Up"></a>
+            {% endif %}
+        </nav>
+
+        <div class="messages">
+            {% with messages = get_flashed_messages() %}
+                {% for message in messages %}
+                    <div>{{ message }}</div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+
+        {% block content %}{% endblock %}
+    </body>
+</html>
