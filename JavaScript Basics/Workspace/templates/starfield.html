@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <title>Starfield</title>
+ </head>
+<body style="background-color: purple;">
+  <script>
+    addEventListener('load', function() {
+        var stars = [];
+        var ctx = field.getContext('2d');
+        var gen = function(z) {
+            return {
+                x: 0 | (Math.random() * 800 - 400),
+                y: 0 | (Math.random() * 600 - 300),
+                z: z || (0 | Math.random() * 15)
+            };
+        }
+        for (var i = 0; i < 200; stars.push(gen(i++)));
+        setInterval(function() {
+            ctx.clearRect(0, 0, 800, 600);
+            ctx.font = '20pt Arial';
+            for (var star in stars) {
+                ctx.fillStyle = '#' + Array(7).join((0 | stars[star].z).toString(16));
+                ctx.fillText(
+                    '*',
+                    stars[star].x / stars[star].z + 400,
+                    stars[star].y / stars[star].z + 300
+                );
+                stars[star].z -= 0.25;
+                if (stars[star].z <= 0) {
+                    stars[star] = gen(15);
+                }
+            }
+        }, 20);
+    });
+    </script>
+    <canvas id="field" width="800" height="600"></canvas>
+</body>
+</html>
